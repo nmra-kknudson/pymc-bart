@@ -111,7 +111,8 @@ class PGBART(ArrayStepShared):
 
     def __init__(
         self,
-        vars=None,  # pylint: disable=redefined-builtin
+        vars=None,  # pylint: disable=redefined-builtin,
+        blocked=None, # KCK workaround to avoid TypeError
         num_particles: int = 10,
         batch: Tuple[float, float] = (0.1, 0.1),
         model: Optional[Model] = None,
